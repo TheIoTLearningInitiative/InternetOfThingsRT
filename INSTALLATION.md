@@ -52,6 +52,8 @@ Disable *ACPI (Advanced Configuration and Power Interface)* under Power manageme
 
 Disable *APM (Advanced Power Management) BIOS support* under  settings ![Fully Preemptible Kernel](menuconfig7.png)
 
+
+
 Save the configuration and exit Kernel Configuration.
 
 When the Kernel configuration is complete, change directory to linux-edison-standard-build folder ```cd tmp/work/edison-poky-linux/linux-yocto/3.10.17+gitAUTOINC+6ad20f049a_c03195ed6e-r0/linux-edison-standard-build/``` and copy the Kernel configuration to these two folders ```cp .config ~/intel-edison-system-setup-files/device-software/meta-edison/recipes-kernel/linux/files/defconfig``` and ```cp .config ../linux/arch/x86/configs/i386_edison_defconfig```. Go back to our edison-src root folder ```cd ~/edison-src``` and configure the shell environment again ```source poky/oe-init-build-env```. Force bitbake to copy the modified configuration to the actual build directory ```bitbake virtual/kernel -c configure -f -v```, now our image is ready to be built ```bitbake edison-image```.
