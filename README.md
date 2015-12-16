@@ -12,7 +12,7 @@ All procedures are done under the Intel Edison platform and a Linux Operating Sy
 
 ## About Real Time Preempt Patch
 
-The standard Linux Kernel has no Real Time capabilities, it only meets soft Real Time requierements; the standard Linux Kernel provides basic POSIX operations for userspace time handling but 
+The standard Linux Kernel has no Real Time capabilities, it only meets soft Real Time requirements; the standard Linux Kernel provides basic POSIX operations for userspace time handling but 
 
 About the RT-Preempt Patch
 The standard Linux kernel only meets soft real-time requirements: it provides basic POSIX operations for userspace time handling but has no guarantees for hard timing deadlines. With Ingo Molnar's Realtime Preemption patch (referenced to as RT-Preempt in this document) and Thomas Gleixner's generic clock event layer with high resolution support, the kernel gains hard realtime capabilities.
