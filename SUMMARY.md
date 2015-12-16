@@ -1,9 +1,8 @@
 # Summary
 
 * [Cover](README.md)
-
-
-* [Part I](part1/README.md)
+* [Pre-Setup(PRE-SETUP.md)
+* [Installation](INSTALLATION.md)
     * [Writing is nice](part1/writing.md)
     * [GitBook is nice](part1/gitbook.md)
 * [Part II](part2/README.md)
