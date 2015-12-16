@@ -1,17 +1,18 @@
 Internet of Things Real Time
 =======
 
-IoT Real Time 
+## IoT Real Time 
 
 This document describes the procedure of installing and using the Real Time Preemption patch for the Linux kernel, and discusses the first steps towards writing hard Real Time programs. It focuses on x86, as this is currently the most mature architecture.
 
 This document will serve as a guidance for those whose purpose is to develop real time applications, having a Rea Time Preemption patch in the Linux Kernel. 
 
-
-All procedures are done under the Intel Edison platform and a Linux Operating System, Debian 7.9. The code for the pre-setup for other distributions is shown, tested to be working, but not used in this document.
+All procedures are done under the Intel Edison platform and a Linux Operating System, Debian 7.9. The code for the Pre-Setup for other distributions is shown, tested to be working, but not used in this document.
 
 
 ## About Real Time Preempt Patch
+
+The standard Linux Kernel has no Real Time capabilities, it only meets soft Real Time requierements; the standard Linux Kernel provides basic POSIX operations for userspace time handling but 
 
 About the RT-Preempt Patch
 The standard Linux kernel only meets soft real-time requirements: it provides basic POSIX operations for userspace time handling but has no guarantees for hard timing deadlines. With Ingo Molnar's Realtime Preemption patch (referenced to as RT-Preempt in this document) and Thomas Gleixner's generic clock event layer with high resolution support, the kernel gains hard realtime capabilities.
