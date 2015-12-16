@@ -2,6 +2,8 @@
 
 First, extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file you just downloaded ```tar -xzf edison-src-rel1-maint-rel1-ww42-14.tgz``` and change directory to the one just extracted ```cd edison-src``` .
 
+Connect two USB cables to the Edison board and to the computer where the commands are executing, move the switch next to the microUSBs slots towards the microUSBs.
+
 Use the setup.sh script that is inside the folder *meta-intel-edison*. This script initializes the build environment for Edison. Type ```./meta-intel-edison/setup.sh``` to run it. Optionally, we can move our download and build cache (also known as sstate) directories under the build directory. Moving these two directories will make it easier to share data between build environments and allow much faster rebuilding images ```./meta-intel-edison/setup.sh --dl_dir=/path/bitbake_download_dir –-
 sstate_dir=/path/bitbake_sstate_dir```  .
 
