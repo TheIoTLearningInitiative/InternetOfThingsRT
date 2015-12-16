@@ -52,6 +52,9 @@ Disable *ACPI (Advanced Configuration and Power Interface)* under Power manageme
 
 Disable *APM (Advanced Power Management) BIOS support* under  settings ![Fully Preemptible Kernel](menuconfig7.png)
 
+Disable *ALSA for SoC audio support* under Device Drivers -> Sound card support -> Advanced Linux Sound Architecture -> ALSA for SoC audio support settings ![ALSA for SoC audio support](menuconfig8.png)
+
+Disable *Aufs (Advanced multi layered unification filesystem) support* under File systems -> Miscellaneous filesystem -> Aufs (Advanced multi layered unification filesystem) support settings ![Aufs](menuconfig9.png)
 
 
 Save the configuration and exit Kernel Configuration.
