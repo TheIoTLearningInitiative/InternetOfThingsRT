@@ -147,6 +147,9 @@ When first run, you will be prompted with a screen like this
 
 Enable *Control Group Support* under General setup settings
 
+    General setup  --->
+     -*- Control Group support  --->
+
  ![Control Group Support](Images/menuconfig2.png) 
 
 Enable *High Resolution Timer Support* under General setup -> Timer subsystem settings
