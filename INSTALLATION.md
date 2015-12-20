@@ -50,16 +50,16 @@ After successfully building the edison-image, run the postBuild script with the 
 
 Create a directory called Patches and then switch to it
 
-    mkdir Patches
-    cd Patches
+    $ mkdir Patches
+    $ cd Patches
 
 and use wget to download the Real Time patches
 
-    http://yoneken.sakura.ne.jp/share/rt_edison.tar.bz2
+    $ http://yoneken.sakura.ne.jp/share/rt_edison.tar.bz2
 
 Decompress the bz2 file
 
-    tar -xaf rt_edison.tar.bz2
+    $ tar -xaf rt_edison.tar.bz2
 
 and move these two patches called *patch-3.10.17-rt12_edison.patch* and *intel_mid_rpmsg.c.patch* to the files directory where new patches are placed
 
