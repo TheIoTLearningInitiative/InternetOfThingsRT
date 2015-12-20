@@ -202,7 +202,7 @@ Disable *Aufs (Advanced multi layered unification filesystem) support* under Fil
 
     File systems  --->
      [*] Miscellaneous filesystems  --->
-      <M>   Aufs (Advanced multi layered unification filesystem) suppor
+      <>   Aufs (Advanced multi layered unification filesystem) support
 
  ![Aufs](Images/menuconfig9.png)
 
