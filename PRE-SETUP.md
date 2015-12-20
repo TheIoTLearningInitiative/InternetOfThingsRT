@@ -14,7 +14,7 @@ This section provides required set up and packages for building an image with Re
 The following packages are needed by a Debian or Debian based distribution, to install them, update and install:
 
     $ sudo apt-get update
-    $ sudo apt-get install build-essential git diffstat gawk chrpath texinfo libtool gcc-multilib dfu-util screen
+    $ sudo apt-get install build-essential git diffstat gawk chrpath texinfo libtool gcc-multilib dfu-util screen u-boot-tools:i386
 
 ### Fedora (supported) distributions
 
