@@ -14,7 +14,7 @@ First, extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file y
     # Modifying 'BB_NUMBER_THREADS = "16"' and 'PARALLEL_MAKE = "-j 12"' (lines 1 and 2)  
     $ source poky/oe-init-build-env  
     $ bitbake edison-image  
-    $ ../device-software/utils/flash/postBuild.sh 
+    $ ../device-software/utils/flash/postBuild.sh
 
 ## Version ww24-15
 
