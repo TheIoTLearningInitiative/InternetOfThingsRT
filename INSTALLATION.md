@@ -42,7 +42,7 @@ It is important to build a full image for the first time before making any chang
 
 Now, let's return to our set up root folder
 
-    $ cd .../edison-src/
+    $ cd ../../edison-src/
 
 After successfully building the edison-image, run the postBuild script with the following command 
 
