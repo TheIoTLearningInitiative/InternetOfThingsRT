@@ -67,7 +67,15 @@ and move these two patches called *patch-3.10.17-rt12_edison.patch* and *intel_m
     cp patch-3.10.17-rt12_edison.patch /meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
     cp intel_mid_rpmsg.c.patch /meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
 
-Now, let's edit a file under the Linux directory, one directory above the files directory we've just copied the Real Time patches. Move to the Linux directory ```cd meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/``` and edit de bbappend file (assuming the edition happens under a Debian based Linux distribution; otherwise use a simple text editor like nano, vi, vim or emacs) ```gedit linux-yocto_3.10.bbappend``` . Replace the content of the file to have the following:
+Now, let's edit a file under the Linux directory, one directory above the files directory we've just copied the Real Time patches. Move to the Linux directory
+
+    cd meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/
+
+and edit de bbappend file (assuming the edition happens under a Debian based Linux distribution; otherwise use a simple text editor like nano, vi, vim or emacs)
+
+    gedit linux-yocto_3.10.bbappend
+    
+Replace the content of the file to have the following:
 
                                     FILESEXTRAPATHS_prepend := "${THISDIR}/files:"  
                                     COMPATIBLE_MACHINE = "edison"  
