@@ -47,7 +47,7 @@ In this case, we move to our home directory, a new folder is created as a Worksp
     $ mkdir Workspace
     $ cd Workspace
 
-In this *Workspace* directory the Edison image is downloaded
+In this *Workspace* directory the Edison image is downloaded, 2 versions available
 
     $ wget downloadmirror.intel.com/24389/eng/edison-src-rel1-maint-rel1-ww42-14.tgz
     $ wget http://downloadmirror.intel.com/25028/eng/edison-src-ww25.5-15.tgz
