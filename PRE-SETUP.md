@@ -38,7 +38,7 @@ To download the Edison image, go to the desired working directory and download i
 In this case, we move to our home directory
 
     cd ~
-a new folder is created as a workspace
+a new folder is created as a Workspace
 
     mkdir Workspace
 
