@@ -33,11 +33,19 @@ The following packages are needed by a CentOS distribution, to install them, upd
 
 
 ## Download Edison Image
+
 To download the Edison image, go to the desired working directory and download it.
 In this case, we move to our home directory
-```cd ~```,
+
+    cd ~
 a new folder is created as a workspace
-```mkdir Workspace```,
+
+    mkdir Workspace
+
 and then we move to this new Workspace directory
-```cd Workspace```.
-In this *Workspace* directory the Edison image is downloaded ```wget downloadmirror.intel.com/24389/eng/edison-src-rel1-maint-rel1-ww42-14.tgz```
+
+    cd Workspace
+
+In this *Workspace* directory the Edison image is downloaded
+
+    wget downloadmirror.intel.com/24389/eng/edison-src-rel1-maint-rel1-ww42-14.tgz```
