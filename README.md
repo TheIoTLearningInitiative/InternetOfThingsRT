@@ -15,3 +15,5 @@ The standard Linux Kernel has no Real Time capabilities, it only meets soft Real
 
 When we apply the RT-Preempt patch the system does not suddenly becomes a Real Time system, but it will be able to shorten the delay time-consuming context switch on the process that Real Time is specified.
 
+- [RealTime Linux Wiki](https://rt.wiki.kernel.org/index.php/Main_Page)
+
