@@ -24,7 +24,6 @@ to run it. Optionally, we can move our download and build cache (also known as s
 
     $ ./meta-intel-edison/setup.sh --dl_dir=/path/bitbake_download_dir --sstate_dir=/path/bitbake_sstate_dir```  .
 
-
 Then, change directory to poky 
 
     cd out/linux64/
