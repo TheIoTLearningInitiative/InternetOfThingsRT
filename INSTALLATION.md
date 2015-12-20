@@ -132,7 +132,7 @@ After successfully building the edison-image, run the postBuild script with the 
 
 Now, let's check that we are in our set up root folder
 
-    $ cd ../../../edison-src/
+    $ ls
 
 Create a directory called Patches and then switch to it
 
