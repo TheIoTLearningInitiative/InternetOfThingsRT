@@ -81,7 +81,7 @@ Create a directory called Patches and then switch to it
 
 and use wget to download the Real Time patches
 
-    $ http://yoneken.sakura.ne.jp/share/rt_edison.tar.bz2
+    $ wget http://yoneken.sakura.ne.jp/share/rt_edison.tar.bz2
 
 Decompress the bz2 file
 
