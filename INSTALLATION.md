@@ -70,7 +70,9 @@ It is important to build a full image for the first time before making any chang
 
 After successfully building the edison-image, run the postBuild script with the following command 
 
-    $ ls out/linux/tmp/deploy/images
+    $ ls
+    bitbake.lock  cache  conf  symbols  tmp  toFlash
+    $ ls tmp/deploy/images
     $ cd ../../../
     $ ln -s out/linux64 build
     $ ./meta-intel-edison/utils/flash/postBuild.sh .
