@@ -172,7 +172,7 @@ Enable Timer frequency to *1000 HZ* under Processor type and features -> Timer f
 
     Processor type and features  --->
      Timer frequency (100 HZ)  --->
-      
+      (X) 1000 HZ
 
  ![Fully Preemptible Kernel](Images/menuconfig5.png)
 
