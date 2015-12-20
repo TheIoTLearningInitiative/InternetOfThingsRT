@@ -277,7 +277,7 @@ Save the configuration and exit Kernel Configuration.
 
 When the Kernel configuration is complete, change directory to linux-edison-standard-build folder
 
-    $ cd tmp/work/edison-poky-linux/linux-yocto/3.10.17+gitAUTOINC+6ad20f049a_c03195ed6e-r0/linux-edison-standard-build/
+    $ cd tmp/work/edison-poky-linux/linux-yocto/3.10.17+gitAUTOINC+6ad20f049a_c03195ed6e-r0/linux-edison-standard-buil/
 
 and copy the Kernel configuration to these two folders
 
