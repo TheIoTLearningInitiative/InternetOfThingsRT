@@ -111,7 +111,7 @@ configure the shell environment again
 
 and get into the Kernel Configuration
 
-    bitbake virtual/kernel -c menuconfig``` .
+    bitbake virtual/kernel -c menuconfig
 
 
 When first run, you will be prompted with a screen like this ![Kernel Configuration](menuconfig1.png)
