@@ -73,6 +73,7 @@ After successfully building the edison-image, run the postBuild script with the 
     $ ls
     bitbake.lock  cache  conf  symbols  tmp  toFlash
     $ ls tmp/deploy/images
+    
     $ cd ../../../
     $ ln -s out/linux64 build
     $ ./meta-intel-edison/utils/flash/postBuild.sh .
