@@ -195,23 +195,23 @@ The whole Edison image is rebuilt using the Real Time patched Kernel.
 
 Now, we have to run a post building script, located in another folder. Change directory to
 
-    cd ../../../meta-intel-edison/utils/
+    $ cd ../../../meta-intel-edison/utils/
 
 and run
     
-    ./postBuild.sh
+    $ ./postBuild.sh
 
 to prepare our new setup for the flashing process. Change directory to the flash folder
 
-    cd flash/
+    $ cd flash/
 
 and execute the flash script with sudo privileges
 
-    sudo ./flashall.sh 
+    $ sudo ./flashall.sh 
 
 Finished the flashing process, get into de Edison system
 
-    sudo screen /dev/ttyUSB0 115200
+    $ sudo screen /dev/ttyUSB0 115200
 
 hit enter a few times and a log in appears. Default user is *root* with no password.
 
