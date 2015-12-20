@@ -35,9 +35,21 @@ Then, change directory to poky, see its content
 and configure the shell environment with the following source command
 
     $ source poky/oe-init-build-env
+    ### Shell environment set up for builds. ###
+
+    You can now run 'bitbake <target>'
+
+    Common targets are:
+        core-image-minimal
+        core-image-sato
+        meta-toolchain
+        adt-installer
+        meta-ide-support
+    
+    You can also run generated qemu images with a command like 'runqemu qemux86'
 
 Now, we are ready to build a full Edison image with the following bitbake command
-
+    
     $ bitbake edison-image
 
 It is important to build a full image for the first time before making any changes to the Edison image. Be patient, this process takes from 2 to 5 or more hours depending on the hardware of the host machine.
