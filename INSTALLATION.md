@@ -57,7 +57,6 @@ Now, we are ready to build a full Edison image with the following bitbake comman
 
     Summary: There were 26 WARNING messages shown.
 
-
 It is important to build a full image for the first time before making any changes to the Edison image. Be patient, this process takes from 2 to 5 or more hours depending on the hardware of the host machine.
 
 Now, let's return to our set up root folder
