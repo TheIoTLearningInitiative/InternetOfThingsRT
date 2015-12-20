@@ -89,8 +89,8 @@ Decompress the bz2 file
 
 and move these two patches called *patch-3.10.17-rt12_edison.patch* and *intel_mid_rpmsg.c.patch* to the files directory where new patches are placed
 
-    $ cp patch-3.10.17-rt12_edison.patch /meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
-    $ cp intel_mid_rpmsg.c.patch /meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
+    $ cp patch-3.10.17-rt12_edison.patch ../meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
+    $ cp intel_mid_rpmsg.c.patch ../meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
 
 Now, let's edit a file under the Linux directory, one directory above the files directory we've just copied the Real Time patches. Move to the Linux directory
 
