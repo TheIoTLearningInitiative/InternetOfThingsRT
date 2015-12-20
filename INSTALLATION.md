@@ -208,7 +208,11 @@ and execute the flash script with sudo privileges
 
     sudo ./flashall.sh 
 
-Finished the flashing process, get into de Edison system ```sudo screen /dev/ttyUSB0 115200``` , hit enter a few times and a log in appears. Default user is *root* with no password.
+Finished the flashing process, get into de Edison system
+
+    sudo screen /dev/ttyUSB0 115200
+
+hit enter a few times and a log in appears. Default user is *root* with no password.
 
 Once logged in run ```uname -a```, the name of the Kernel should have been renamed with the RT tags as shown below.
 
