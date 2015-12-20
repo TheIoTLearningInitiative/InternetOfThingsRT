@@ -113,7 +113,7 @@ and get into the Kernel Configuration
     $ bitbake virtual/kernel -c menuconfig
 
 
-When first run, you will be prompted with a screen like this ![Kernel Configuration](images/menuconfig1.png)
+When first run, you will be prompted with a screen like this ![Kernel Configuration](Images/menuconfig1.png)
 
 Enable *Control Group Support* under General setup settings ![Control Group Support](menuconfig2.png) 
 
