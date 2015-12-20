@@ -200,7 +200,9 @@ Disable *ALSA for SoC audio support* under Device Drivers -> Sound card support 
 
 Disable *Aufs (Advanced multi layered unification filesystem) support* under File systems -> Miscellaneous filesystem -> Aufs (Advanced multi layered unification filesystem) support settings
 
-    
+    File systems  --->
+     [*] Miscellaneous filesystems  --->
+      <M>   Aufs (Advanced multi layered unification filesystem) suppor
 
  ![Aufs](Images/menuconfig9.png)
 
