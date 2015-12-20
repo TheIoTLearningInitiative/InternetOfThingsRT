@@ -10,6 +10,7 @@ First, extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file y
     arduino  broadcom_cws  device-software  mw
     $ cd edison-src
 
+ 
 rm -rf intel-edison-system-setup-files/  
 tar -xzf edison-src-rel1-maint-rel1-ww42-14.tgz  
 mv edison-src intel-edison-system-setup-files  
