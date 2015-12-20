@@ -78,44 +78,6 @@ After successfully building the edison-image, run the postBuild script with the 
 
     $ ls
     bitbake.lock  cache  conf  symbols  tmp  toFlash
-
-    $ ls tmp/deploy/images/edison
-    bzImage
-    bzImage--3.10.17+git0+6ad20f049a_c03195ed6e-r0-edison-20151220135703.bin
-    bzImage--3.10.17+git0+6ad20f049a_c03195ed6e-r0-edison-20151220220030.bin
-    bzImage-edison.bin
-    edison-image-edison-20151220045929.hddimg
-    edison-image-edison-20151220045929.rootfs.ext4
-    edison-image-edison-20151220045929.rootfs.manifest
-    edison-image-edison-20151220122444.hddimg
-    edison-image-edison-20151220122444.rootfs.ext4
-    edison-image-edison-20151220122444.rootfs.manifest
-    edison-image-edison-20151220135703.hddimg
-    edison-image-edison-20151220135703.rootfs.ext4
-    edison-image-edison-20151220135703.rootfs.manifest
-    edison-image-edison-20151220213828.hddimg
-    edison-image-edison-20151220213828.rootfs.ext4
-    edison-image-edison-20151220213828.rootfs.manifest
-    edison-image-edison-20151220220030.hddimg
-    edison-image-edison-20151220220030.rootfs.ext4
-    edison-image-edison-20151220220030.rootfs.manifest
-    edison-image-edison-20151220221248.hddimg
-    edison-image-edison-20151220221248.rootfs.ext4
-    edison-image-edison-20151220221248.rootfs.manifest
-    edison-image-edison.ext4
-    edison-image-edison.hddimg
-    edison-image-edison.manifest
-    modules--3.10.17+git0+6ad20f049a_c03195ed6e-r0-edison-20151220135703.tgz
-    modules--3.10.17+git0+6ad20f049a_c03195ed6e-r0-edison-20151220220030.tgz
-    modules-edison.tgz
-    README_-_DO_NOT_DELETE_FILES_IN_THIS_DIRECTORY.txt
-    u-boot.bin
-    u-boot-edison-2014.04-1-r0.bin
-    u-boot-edison-2014.04-1-r0.img
-    u-boot-edison.bin
-    u-boot-edison.img
-    u-boot-envs
-    u-boot.img
     $ cd ../../../
     $ ln -s out/linux64/build/ build
     $ ./meta-intel-edison/utils/flash/postBuild.sh .
