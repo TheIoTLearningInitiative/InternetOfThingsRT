@@ -162,6 +162,10 @@ Enable *High Resolution Timer Support* under General setup -> Timer subsystem se
 
 Enable *Fully Preemptible Kernel (RT)* under Processor type and features settings
 
+    Processor type and features  --->
+     Preemption Model (Fully Preemptible Kernel (RT))  --->
+      (X) Fully Preemptible Kernel (RT)
+
  ![Fully Preemptible Kernel](Images/menuconfig4.png)
 
 Enable Timer frequency to *1000 HZ* under Processor type and features -> Timer frequency settings
