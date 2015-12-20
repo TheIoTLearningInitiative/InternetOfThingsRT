@@ -77,29 +77,29 @@ and edit de bbappend file (assuming the edition happens under a Debian based Lin
     
 Replace the content of the file to have the following:
 
-                                    FILESEXTRAPATHS_prepend := "${THISDIR}/files:"  
-                                    COMPATIBLE_MACHINE = "edison"  
-                                    LINUX_VERSION = "3.10.17"  
-                                    SRCREV_machine = "c03195ed6e3066494e3fb4be69154a57066e845b"  
-                                    SRCREV_meta = "6ad20f049abd52b515a8e0a4664861cfd331f684"  
-                                      
-                                    SRC_URI += "file://defconfig"  
-                                    SRC_URI += "file://upstream_to_edison.patch"  
-                                    SRC_URI += "file://patch-3.10.17-rt12_edison.patch"  
-                                    SRC_URI += "file://intel_mid_rpmsg.c.patch"  
-                                    do_configure() {  
-                                      cp "${WORKDIR}/defconfig" "${B}/.config"  
-                                    }  
-                                    do_kernel_configme() {  
-                                      cp "${WORKDIR}/defconfig" "${B}/.config"  
-                                    }  
-                                    do_patch() {  
-                                      cd ${S}  
-                                      git am "${WORKDIR}/upstream_to_edison.patch"  
-                                      git apply "${WORKDIR}/patch-3.10.17-rt12_edison.patch"  
-                                      git apply "${WORKDIR}/intel_mid_rpmsg.c.patch"  
-                                    }
-                                    
+    FILESEXTRAPATHS_prepend := "${THISDIR}/files:"  
+    COMPATIBLE_MACHINE = "edison"  
+    LINUX_VERSION = "3.10.17"  
+    SRCREV_machine = "c03195ed6e3066494e3fb4be69154a57066e845b"  
+    SRCREV_meta = "6ad20f049abd52b515a8e0a4664861cfd331f684"  
+      
+    SRC_URI += "file://defconfig"  
+    SRC_URI += "file://upstream_to_edison.patch"  
+    SRC_URI += "file://patch-3.10.17-rt12_edison.patch"  
+    SRC_URI += "file://intel_mid_rpmsg.c.patch"  
+    do_configure() {  
+      cp "${WORKDIR}/defconfig" "${B}/.config"  
+    }  
+    do_kernel_configme() {  
+      cp "${WORKDIR}/defconfig" "${B}/.config"  
+    }  
+    do_patch() {  
+      cd ${S}  
+      git am "${WORKDIR}/upstream_to_edison.patch"  
+      git apply "${WORKDIR}/patch-3.10.17-rt12_edison.patch"  
+      git apply "${WORKDIR}/intel_mid_rpmsg.c.patch"  
+    }
+
 
 Now, move to our edison root folder ```cd ~/edison-src/``` , configure the shell environment again ```source poky/oe-init-build-env``` , and get into the Kernel Configuration ```bitbake virtual/kernel -c menuconfig``` .
 
