@@ -178,7 +178,8 @@ Enable Timer frequency to *1000 HZ* under Processor type and features -> Timer f
 
 Disable *ACPI (Advanced Configuration and Power Interface)* under Power management and ACPI options settings
 
-    
+    Power management and ACPI options  --->
+     [ ] ACPI (Advanced Configuration and Power Interface) Support  --
 
  ![ACPI](Images/menuconfig6.png)
 
