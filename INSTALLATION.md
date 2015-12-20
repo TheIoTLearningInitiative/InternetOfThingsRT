@@ -70,6 +70,7 @@ It is important to build a full image for the first time before making any chang
 
 After successfully building the edison-image, run the postBuild script with the following command 
 
+    $ 
     $ ln -s edison-src/out/linux64 edison-src/build
     $ ./meta-intel-edison/utils/flash/postBuild.sh .
 
