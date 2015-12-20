@@ -110,7 +110,6 @@ After successfully building the edison-image, run the postBuild script with the 
     u-boot-edison.img
     u-boot-envs
     u-boot.img
-
     $ cd ../../../
     $ ln -s out/linux64 build
     $ ./meta-intel-edison/utils/flash/postBuild.sh .
