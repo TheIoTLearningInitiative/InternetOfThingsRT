@@ -65,7 +65,7 @@ Now, let's return to our set up root folder
 
 After successfully building the edison-image, run the postBuild script with the following command 
 
-    $ ./meta-intel-edison/utils/flash/postBuild.sh
+    $ ../meta-intel-edison/utils/flash/postBuild.sh
 
 Create a directory called Patches and then switch to it
 
