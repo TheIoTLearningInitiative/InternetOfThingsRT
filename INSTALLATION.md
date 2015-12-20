@@ -32,7 +32,7 @@ to run it. Optionally, we can move our download and build cache (also known as s
 Then, change directory to poky, see its content
 
     $ cd out/linux64/
-    $ ls 
+    $ ls
     build  poky
 
 and configure the shell environment with the following source command
