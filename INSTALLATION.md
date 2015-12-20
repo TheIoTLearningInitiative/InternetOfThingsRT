@@ -9,7 +9,7 @@ First, extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file y
     $ ls edison-src
     arduino  broadcom_cws  device-software  mw
     $ cd edison-src
-    $ ./device-software/setup.sh  
+    $ ./device-software/setup.sh
     $ gedit ./build/conf/local.conf
     # Modifying 'BB_NUMBER_THREADS = "16"' and 'PARALLEL_MAKE = "-j 12"' (lines 1 and 2)  
     $ source poky/oe-init-build-env  
