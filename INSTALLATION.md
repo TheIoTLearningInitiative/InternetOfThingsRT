@@ -10,7 +10,7 @@ Version ww42-14
     arduino  broadcom_cws  device-software  mw
     $ cd edison-src
 
-Version ww24-15
+## Version ww24-15
 
     $ tar xvf edison-src-ww25.5-15.tgz
     $ ls edison-src
