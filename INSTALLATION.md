@@ -3,6 +3,7 @@
 First, extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file you just downloaded and change directory to the one just extracted
 
     $ tar -xzf edison-src-rel1-maint-rel1-ww42-14.tgz
+    $ tar xvf edison-src-ww25.5-15.tgz
     $ cd edison-src
 
 Connect two USB cables to the Edison board and to the computer where the commands are executing, move the switch next to the microUSBs slots towards the microUSBs.
