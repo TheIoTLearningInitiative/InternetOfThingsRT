@@ -154,6 +154,10 @@ Enable *Control Group Support* under General setup settings
 
 Enable *High Resolution Timer Support* under General setup -> Timer subsystem settings
 
+    General setup  --->
+     Timers subsystem  --->
+      [*] High Resolution Timer Support
+
  ![High Resolution Timer Support](Images/menuconfig3.png)
 
 Enable *Fully Preemptible Kernel (RT)* under Processor type and features settings
