@@ -70,6 +70,8 @@ After successfully building the edison-image, run the postBuild script with the 
 
     $ ../meta-intel-edison/utils/flash/postBuild.sh
 
+Error! Cannot work with postBuild.sh due to the paths, please review the steps, postBuild.sh requires a path of edison-src/build/toFlash/
+
 Now, let's return to our set up root folder
 
     $ cd ../../../edison-src/
