@@ -2,14 +2,14 @@
 
 First, extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file you just downloaded and change directory to the one just extracted
 
-v1 ww42-14
+Version ww42-14
 
     $ tar -xzf edison-src-rel1-maint-rel1-ww42-14.tgz
     $ ls edison-src
     arduino  broadcom_cws  device-software  mw
 
 
-v2 ww24-15
+Version ww24-15
 
     $ tar xvf edison-src-ww25.5-15.tgz
     $ ls edison-src
