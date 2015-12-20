@@ -28,26 +28,26 @@ to run it. Optionally, we can move our download and build cache (also known as s
 
 Then, change directory to poky 
 
-    cd out/linux64/
+    $ cd out/linux64/
 
 and configure the shell environment with the following source command
 
-    source poky/oe-init-build-env
+    $ source poky/oe-init-build-env
 
 Now, we are ready to build a full Edison image with the following bitbake command
 
-    bitbake edison-image
+    $ bitbake edison-image
 
 It is important to build a full image for the first time before making any changes to the Edison image. Be patient, this process takes from 2 to 5 or more hours depending on the hardware of the host machine.
 
 
 Now, let's return to our set up root folder
 
-    cd ~/edison-src/
+    $ cd ~/edison-src/
 
 After successfully building the edison-image, run the postBuild script with the following command 
 
-    ./meta-intel-edison/utils/flash/postBuild.sh
+    $ ./meta-intel-edison/utils/flash/postBuild.sh
 
 Create a directory called Patches and then switch to it
 
