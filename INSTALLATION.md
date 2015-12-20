@@ -14,6 +14,7 @@ Version ww24-15
     $ tar xvf edison-src-ww25.5-15.tgz
     $ ls edison-src
     Makefile  meta-intel-edison
+    $ cd edison-src
 
 Connect two USB cables to the Edison board and to the computer where the commands are executing, move the switch next to the microUSBs slots towards the microUSBs.
 
