@@ -159,7 +159,7 @@ Replace the content of the file to have the following:
 
 Now, move to our out/linux root folder
 
-    $ cd ../../../../
+    $ cd ../../../../out/linux64/
 
 configure the shell environment again
 
