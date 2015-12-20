@@ -185,6 +185,9 @@ Disable *ACPI (Advanced Configuration and Power Interface)* under Power manageme
 
 Disable *APM (Advanced Power Management) BIOS support* under  settings
 
+    Power management and ACPI options  --->
+     < > APM (Advanced Power Management) BIOS support  --->
+
  ![Fully Preemptible Kernel](Images/menuconfig7.png)
 
 Disable *ALSA for SoC audio support* under Device Drivers -> Sound card support -> Advanced Linux Sound Architecture -> ALSA for SoC audio support settings
