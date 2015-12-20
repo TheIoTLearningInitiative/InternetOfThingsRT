@@ -130,10 +130,6 @@ After successfully building the edison-image, run the postBuild script with the 
     Run the flashall script there to start flashing.
     *************
 
-Now, let's return to our set up root folder
-
-    $ cd ../../../edison-src/
-
 Create a directory called Patches and then switch to it
 
     $ mkdir Patches
