@@ -200,6 +200,8 @@ Disable *ALSA for SoC audio support* under Device Drivers -> Sound card support 
 
 Disable *Aufs (Advanced multi layered unification filesystem) support* under File systems -> Miscellaneous filesystem -> Aufs (Advanced multi layered unification filesystem) support settings
 
+    
+
  ![Aufs](Images/menuconfig9.png)
 
 Save the configuration and exit Kernel Configuration.
