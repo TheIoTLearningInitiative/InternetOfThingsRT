@@ -9,7 +9,6 @@ This document will serve as a guidance for those whose purpose is to develop rea
 
 All procedures are done under the Intel Edison platform and a Linux Operating System, Debian 7.9. The code for the Pre-Setup for other distributions is shown, tested to be working, but not used in this document.
 
-
 ## About Real Time Preempt Patch
 
 The standard Linux Kernel has no Real Time capabilities, it only meets soft Real Time requirements; the standard Linux Kernel provides basic time handling but does not guarantee hard timing deadlines.  
