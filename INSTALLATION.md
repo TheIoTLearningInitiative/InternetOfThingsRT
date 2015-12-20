@@ -72,6 +72,8 @@ After successfully building the edison-image, run the postBuild script with the 
 
 **Error!** Cannot work with postBuild.sh due to the paths, please review the steps, postBuild.sh requires a path of edison-src/build/
 
+./meta-intel-edison/utils/flash/postBuild.sh /home/abraham/Projects/RealTime/v25/edison-src/out/current/build
+
 Now, let's return to our set up root folder
 
     $ cd ../../../edison-src/
