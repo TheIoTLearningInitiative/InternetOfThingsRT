@@ -178,6 +178,8 @@ Enable Timer frequency to *1000 HZ* under Processor type and features -> Timer f
 
 Disable *ACPI (Advanced Configuration and Power Interface)* under Power management and ACPI options settings
 
+    
+
  ![ACPI](Images/menuconfig6.png)
 
 Disable *APM (Advanced Power Management) BIOS support* under  settings
