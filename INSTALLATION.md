@@ -101,7 +101,17 @@ Replace the content of the file to have the following:
     }
 
 
-Now, move to our edison root folder ```cd ~/edison-src/``` , configure the shell environment again ```source poky/oe-init-build-env``` , and get into the Kernel Configuration ```bitbake virtual/kernel -c menuconfig``` .
+Now, move to our edison root folder
+
+    cd ~/edison-src/
+
+configure the shell environment again
+
+    source poky/oe-init-build-env
+
+and get into the Kernel Configuration
+
+    bitbake virtual/kernel -c menuconfig``` .
 
 
 When first run, you will be prompted with a screen like this ![Kernel Configuration](menuconfig1.png)
