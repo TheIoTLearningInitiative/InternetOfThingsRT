@@ -115,21 +115,21 @@ and get into the Kernel Configuration
 
 When first run, you will be prompted with a screen like this ![Kernel Configuration](Images/menuconfig1.png)
 
-Enable *Control Group Support* under General setup settings ![Control Group Support](menuconfig2.png) 
+Enable *Control Group Support* under General setup settings ![Control Group Support](Images/menuconfig2.png) 
 
-Enable *High Resolution Timer Support* under General setup -> Timer subsystem settings ![High Resolution Timer Support](menuconfig3.png)
+Enable *High Resolution Timer Support* under General setup -> Timer subsystem settings ![High Resolution Timer Support](Images/menuconfig3.png)
 
-Enable *Fully Preemptible Kernel (RT)* under Processor type and features settings ![Fully Preemptible Kernel](menuconfig4.png)
+Enable *Fully Preemptible Kernel (RT)* under Processor type and features settings ![Fully Preemptible Kernel](Images/menuconfig4.png)
 
-Enable Timer frequency to *1000 HZ* under Processor type and features -> Timer frequency settings ![Fully Preemptible Kernel](menuconfig5.png)
+Enable Timer frequency to *1000 HZ* under Processor type and features -> Timer frequency settings ![Fully Preemptible Kernel](Images/menuconfig5.png)
 
-Disable *ACPI (Advanced Configuration and Power Interface)* under Power management and ACPI options settings ![ACPI](menuconfig6.png)
+Disable *ACPI (Advanced Configuration and Power Interface)* under Power management and ACPI options settings ![ACPI](Images/menuconfig6.png)
 
-Disable *APM (Advanced Power Management) BIOS support* under  settings ![Fully Preemptible Kernel](menuconfig7.png)
+Disable *APM (Advanced Power Management) BIOS support* under  settings ![Fully Preemptible Kernel](Images/menuconfig7.png)
 
-Disable *ALSA for SoC audio support* under Device Drivers -> Sound card support -> Advanced Linux Sound Architecture -> ALSA for SoC audio support settings ![ALSA for SoC audio support](menuconfig8.png)
+Disable *ALSA for SoC audio support* under Device Drivers -> Sound card support -> Advanced Linux Sound Architecture -> ALSA for SoC audio support settings ![ALSA for SoC audio support](Images/menuconfig8.png)
 
-Disable *Aufs (Advanced multi layered unification filesystem) support* under File systems -> Miscellaneous filesystem -> Aufs (Advanced multi layered unification filesystem) support settings ![Aufs](menuconfig9.png)
+Disable *Aufs (Advanced multi layered unification filesystem) support* under File systems -> Miscellaneous filesystem -> Aufs (Advanced multi layered unification filesystem) support settings ![Aufs](Images/menuconfig9.png)
 
 
 Save the configuration and exit Kernel Configuration.
