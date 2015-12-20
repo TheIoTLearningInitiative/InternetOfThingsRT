@@ -38,7 +38,6 @@ The following packages are needed by a CentOS distribution, to install them, upd
     sudo yum update
     sudo yum install make docbook-style-dsssl docbook-style-xsl docbook-dtds docbook-utils fop libxslt dblatex xmlto
 
-
 ## Download Edison Image
 
 To download the Edison image, go to the desired working directory and download it.
