@@ -112,12 +112,15 @@ Replace the content of the file to have the following:
     SRC_URI += "file://upstream_to_edison.patch"  
     SRC_URI += "file://patch-3.10.17-rt12_edison.patch"  
     SRC_URI += "file://intel_mid_rpmsg.c.patch"  
+    
     do_configure() {  
       cp "${WORKDIR}/defconfig" "${B}/.config"  
     }  
+    
     do_kernel_configme() {  
       cp "${WORKDIR}/defconfig" "${B}/.config"  
     }  
+    
     do_patch() {  
       cd ${S}  
       git am "${WORKDIR}/upstream_to_edison.patch"  
