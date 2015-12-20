@@ -13,30 +13,30 @@ This section provides required set up and packages for building an image with Re
 
 The following packages are needed by a Debian or Debian based distribution, to install them, update and install:
 
-    sudo apt-get update
-    sudo apt-get install build-essential git diffstat gawk chrpath texinfo libtool gcc-multilib dfu-util screen
+    $ sudo apt-get update
+    $ sudo apt-get install build-essential git diffstat gawk chrpath texinfo libtool gcc-multilib dfu-util screen
 
 ### Fedora (supported) distributions
 
 The following packages are needed by a Fedora distribution, to install them, update and install:
 For newer versions of Fedora where ```yum``` is deprecated, please us ```dnf``` instead of ```yum```.
 
-    sudo yum update
-    sudo yum install gawk make wget tar bzip2 gzip python unzip perl patch    diffutils diffstat git cpp gcc gcc-c++ glibc-devel texinfo chrpath ccache perl-Data-Dumper perl-Text-ParseWords perl-Thread-Queue
+    $ sudo yum update
+    $ sudo yum install gawk make wget tar bzip2 gzip python unzip perl patch    diffutils diffstat git cpp gcc gcc-c++ glibc-devel texinfo chrpath ccache perl-Data-Dumper perl-Text-ParseWords perl-Thread-Queue
 
 ### OpenSUSE (supported) distributions
 
 The following packages are needed by an OpenSUSE distribution, to install them, update and install:
 
-    sudo zypper update
-    sudo zypper install python gcc gcc-c++ git chrpath make wget python-xml diffstat texinfo python-curses patch
+    $ sudo zypper update
+    $ sudo zypper install python gcc gcc-c++ git chrpath make wget python-xml diffstat texinfo python-curses patch
 
 ### CentOS (supported) distributions
 
 The following packages are needed by a CentOS distribution, to install them, update and install:
 
-    sudo yum update
-    sudo yum install make docbook-style-dsssl docbook-style-xsl docbook-dtds docbook-utils fop libxslt dblatex xmlto
+    $ sudo yum update
+    $ sudo yum install make docbook-style-dsssl docbook-style-xsl docbook-dtds docbook-utils fop libxslt dblatex xmlto
 
 ## Download Edison Image
 
