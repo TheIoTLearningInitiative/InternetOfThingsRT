@@ -181,15 +181,15 @@ Go back to our edison-src root folder
 
 and configure the shell environment again
 
-    source poky/oe-init-build-env
+    $ source poky/oe-init-build-env
 
 Force bitbake to copy the modified configuration to the actual build directory
 
-    bitbake virtual/kernel -c configure -f -v
+    $ bitbake virtual/kernel -c configure -f -v
 
 now our image is ready to be built
     
-    bitbake edison-image
+    $ bitbake edison-image
 
 The whole Edison image is rebuilt using the Real Time patched Kernel.
 
