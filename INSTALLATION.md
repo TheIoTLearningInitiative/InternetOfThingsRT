@@ -170,6 +170,10 @@ Enable *Fully Preemptible Kernel (RT)* under Processor type and features setting
 
 Enable Timer frequency to *1000 HZ* under Processor type and features -> Timer frequency settings
 
+    Processor type and features  --->
+     Timer frequency (100 HZ)  --->
+      
+
  ![Fully Preemptible Kernel](Images/menuconfig5.png)
 
 Disable *ACPI (Advanced Configuration and Power Interface)* under Power management and ACPI options settings
