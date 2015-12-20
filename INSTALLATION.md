@@ -129,9 +129,9 @@ Replace the content of the file to have the following:
     }
 
 
-Now, move to our edison root folder
+Now, move to our out/linux root folder
 
-    $ cd ~/edison-src/
+    $ cd ../../../../
 
 configure the shell environment again
 
