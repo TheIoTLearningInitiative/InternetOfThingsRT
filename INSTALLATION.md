@@ -2,9 +2,17 @@
 
 First, extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file you just downloaded and change directory to the one just extracted
 
+v1 ww42-14
+
     $ tar -xzf edison-src-rel1-maint-rel1-ww42-14.tgz
+    $ ls edison-src
+    arduino  broadcom_cws  device-software  mw
+
+
+v2 ww24-15
+
     $ tar xvf edison-src-ww25.5-15.tgz
-    $ cd edison-src
+    $ ls edison-src
 
 Connect two USB cables to the Edison board and to the computer where the commands are executing, move the switch next to the microUSBs slots towards the microUSBs.
 
