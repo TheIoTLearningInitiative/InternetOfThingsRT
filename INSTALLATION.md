@@ -30,6 +30,7 @@ Then, change directory to poky, see its content
 
     $ cd out/linux64/
     $ ls 
+    build  poky
 
 and configure the shell environment with the following source command
 
