@@ -193,7 +193,8 @@ Disable *APM (Advanced Power Management) BIOS support* under  settings
 Disable *ALSA for SoC audio support* under Device Drivers -> Sound card support -> Advanced Linux Sound Architecture -> ALSA for SoC audio support settings
 
     Device Drivers  --->
-    
+     <*> Sound card support  ---> 
+      < >   Advanced Linux Sound Architecture  --->
 
  ![ALSA for SoC audio support](Images/menuconfig8.png)
 
