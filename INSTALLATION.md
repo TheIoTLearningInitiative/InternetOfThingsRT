@@ -113,6 +113,22 @@ After successfully building the edison-image, run the postBuild script with the 
     $ cd ../../../
     $ ln -s out/linux64/build/ build
     $ ./meta-intel-edison/utils/flash/postBuild.sh .
+    EDISON_ROOTFS_MB = 1536, IMAGE_SIZE_MB = 548
+1+0 records in
+1+0 records out
+...
+Image Name:   Edison Updater script
+Created:      Sun Dec 20 16:22:46 2015
+Image Type:   PowerPC Linux Script (uncompressed)
+Data Size:    14683 Bytes = 14.34 kB = 0.01 MB
+Load Address: 00010000
+Entry Point:  00010000
+Contents:
+   Image 0: 14675 Bytes = 14.33 kB = 0.01 MB
+**** Done ***
+Files ready to flash in /home/abraham/Projects/RealTime/v25/edison-src/build/toFlash/
+Run the flashall script there to start flashing.
+*************
 
 Now, let's return to our set up root folder
 
