@@ -9,11 +9,11 @@ Connect two USB cables to the Edison board and to the computer where the command
 
 Use the setup.sh script that is inside the folder *meta-intel-edison*. This script initializes the build environment for Edison. Type
 
-    ./meta-intel-edison/setup.sh
+    $ ./meta-intel-edison/setup.sh
 
 to run it. Optionally, we can move our download and build cache (also known as sstate) directories under the build directory. Moving these two directories will make it easier to share data between build environments and allow much faster rebuilding images
 
-    ./meta-intel-edison/setup.sh --dl_dir=/path/bitbake_download_dir --sstate_dir=/path/bitbake_sstate_dir```  .
+    $ ./meta-intel-edison/setup.sh --dl_dir=/path/bitbake_download_dir --sstate_dir=/path/bitbake_sstate_dir```  .
 
 
 Then, change directory to poky ```cd out/linux64/``` and configure the shell environment with the following source command ```source poky/oe-init-build-env```. Now, we are ready to build a full Edison image with the following bitbake command  ```bitbake edison-image```   , it is important to build a full image for the first time before making any changes to the Edison image. Be patient, this process takes from 2 to 5 or more hours depending on the hardware of the host machine.
