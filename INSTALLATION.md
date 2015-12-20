@@ -157,7 +157,6 @@ Replace the content of the file to have the following:
       git apply "${WORKDIR}/intel_mid_rpmsg.c.patch"  
     }
 
-
 Now, move to our out/linux root folder
 
     $ cd ../../../../
