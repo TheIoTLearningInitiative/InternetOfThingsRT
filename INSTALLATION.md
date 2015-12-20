@@ -36,14 +36,6 @@ Then, change directory to poky, see its content
 and configure the shell environment with the following source command
 
     $ source poky/oe-init-build-env
-    Loading cache: 100% |###################################################################################################| ETA:  00:00:00
-    Loaded 1365 entries from dependency cache.
-    NOTE: Resolving any missing task queue dependencies
-    
-    Build Configuration:
-    BB_VERSION        = "1.24.0"
-    BUILD_SYS         = "x86_64-linux"
-    
     ### Shell environment set up for builds. ###
 
     You can now run 'bitbake <target>'
@@ -60,6 +52,13 @@ and configure the shell environment with the following source command
 Now, we are ready to build a full Edison image with the following bitbake command
     
     $ bitbake edison-image
+    Loading cache: 100% |###################################################################################################| ETA:  00:00:00
+    Loaded 1365 entries from dependency cache.
+    NOTE: Resolving any missing task queue dependencies
+    
+    Build Configuration:
+    BB_VERSION        = "1.24.0"
+    BUILD_SYS         = "x86_64-linux"
     ... ...
     NOTE: Tasks Summary: Attempted 3757 tasks of which 568 didn't need to be rerun and all succeeded.
 
