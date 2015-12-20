@@ -27,7 +27,7 @@ to run it. Optionally, we can move our download and build cache (also known as s
 
     $ mkdir bitbake_download_dir
     $ mkdir bitbake_sstate_dir
-    $ ./meta-intel-edison/setup.sh --dl_dir=bitbake_download_dir --sstate_dir=bitbake_sstate_dir```  .
+    $ ./meta-intel-edison/setup.sh --dl_dir=bitbake_download_dir --sstate_dir=bitbake_sstate_dir
 
 Then, change directory to poky, see its content
 
