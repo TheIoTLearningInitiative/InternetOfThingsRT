@@ -25,6 +25,7 @@ Use the setup.sh script that is inside the folder *meta-intel-edison*. This scri
 
 to run it. Optionally, we can move our download and build cache (also known as sstate) directories under the build directory. Moving these two directories will make it easier to share data between build environments and allow much faster rebuilding images
 
+    
     $ ./meta-intel-edison/setup.sh --dl_dir=bitbake_download_dir --sstate_dir=bitbake_sstate_dir```  .
 
 Then, change directory to poky, see its content
