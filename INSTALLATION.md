@@ -68,9 +68,8 @@ It is important to build a full image for the first time before making any chang
 
 After successfully building the edison-image, run the postBuild script with the following command 
 
-    $ ../meta-intel-edison/utils/flash/postBuild.sh
+    $ ../meta-intel-edison/utils/flash/postBuild.sh .
 
-**Error!** Cannot work with postBuild.sh due to the paths, please review the steps, postBuild.sh requires a path of edison-src/build/
 
 ./meta-intel-edison/utils/flash/postBuild.sh /home/abraham/Projects/RealTime/v25/edison-src/out/current/build
 
