@@ -80,7 +80,7 @@ After successfully building the edison-image, run the postBuild script with the 
     bitbake.lock  cache  conf  symbols  tmp  toFlash
     $ cd ../../../
     $ ln -s out/linux64/build/ build
-    $ ./meta-intel-edison/utils/flash/postBuild.sh
+    $ ./meta-intel-edison/utils/flash/postBuild.sh .
     EDISON_ROOTFS_MB = 1536, IMAGE_SIZE_MB = 548
     1+0 records in
     1+0 records out
