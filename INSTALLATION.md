@@ -96,7 +96,7 @@ After successfully building the edison-image, run the postBuild script with the 
     Run the flashall script there to start flashing.
     *************
 
-And finally flash 
+And finally Flash intel Edison image
 
     $ ./toFlash/flashall.sh
 
