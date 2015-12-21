@@ -92,7 +92,7 @@ After successfully building the edison-image, run the postBuild script with the 
     Contents:
        Image 0: 14675 Bytes = 14.33 kB = 0.01 MB
     **** Done ***
-    Files ready to flash in /home/abraham/Projects/RealTime/v25/edison-src/build/toFlash/
+    Files ready to flash in ./toFlash/
     Run the flashall script there to start flashing.
     *************
 
