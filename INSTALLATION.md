@@ -102,7 +102,7 @@ And finally Flash Intel Edison image
 
 Now, let's check that we are in our set up root folder
 
-    $ ls
+    $ cd ../../../
     bbcache  build  flash.log  Makefile  meta-arduino  meta-intel-edison  out  Patches  pub
 
 Create a directory called Patches and then switch to it
