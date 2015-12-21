@@ -96,6 +96,10 @@ After successfully building the edison-image, run the postBuild script with the 
     Run the flashall script there to start flashing.
     *************
 
+And finally flash 
+
+    $ ./toFlash/flashall.sh
+
 Now, let's check that we are in our set up root folder
 
     $ ls
