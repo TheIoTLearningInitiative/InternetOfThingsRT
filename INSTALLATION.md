@@ -100,7 +100,7 @@ And finally Flash Intel Edison image
 
     $ ./toFlash/flashall.sh
 
-Now, change our set up root folder
+Now, change to our root folder
 
     $ cd ../../../
     bbcache  build  flash.log  Makefile  meta-arduino  meta-intel-edison  out  Patches  pub
