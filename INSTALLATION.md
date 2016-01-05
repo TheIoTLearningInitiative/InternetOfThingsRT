@@ -6,6 +6,7 @@ First, extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file y
 ## Version ww42-14
 
 Go to your home directory
+
     $ cd
 
 Untar...
