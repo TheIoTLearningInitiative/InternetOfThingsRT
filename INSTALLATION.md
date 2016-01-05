@@ -105,7 +105,9 @@ Now, change to our root folder
     $ cd ../../../
     bbcache  build  flash.log  Makefile  meta-arduino  meta-intel-edison  out  Patches  pub
     $ ls
+    <>
     $ pwd
+    <>
     
 Create a directory called Patches and then switch to it
 
