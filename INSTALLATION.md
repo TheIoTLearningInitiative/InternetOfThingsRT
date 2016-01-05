@@ -240,7 +240,7 @@ Disable *Aufs (Advanced multi layered unification filesystem) support* under Fil
 
  ![Aufs](Images/menuconfig9.png)
 
-Save the configuration and exit Kernel Configuration.
+Select __< Save >__ to keep the Kernel Configuration and then select __< Exit >__ to go back to your console
 
 When the Kernel configuration is complete, change directory to linux-edison-standard-build folder
 
