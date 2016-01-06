@@ -1,7 +1,16 @@
 Installation
 ==
 
-First, extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file you just downloaded and change directory to the one just extracted
+First, make sure we are at the current path and have the file we just downloaded.
+
+    $ pwd
+    /home/iotchampion/Workspace
+    $ ls -l
+    total 6052
+    -rw-r--r-- 1 iotchampion iot 6195269 Jul 13 16:35 edison-src-ww25.5-15.tgz
+
+    
+extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file you just downloaded and change directory to the one just extracted
 
 ## Version ww42-14
 
