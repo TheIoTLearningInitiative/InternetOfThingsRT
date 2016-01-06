@@ -363,16 +363,18 @@ and copy the Kernel configuration to these two folders
 Go back to our linux64 folder
 
     $ cd ~/Workspace/edison-src/out/linux64
+    $ pwd
+    /home/iotchampion/Workspace/edison-src/out/linux64
 
 and configure the shell environment again
 
     $ source poky/oe-init-build-env
 
-Force bitbake to copy the modified configuration to the actual build directory
+Force bitbake to copy the modified configuration to the actual build directory.
 
     $ bitbake virtual/kernel -c configure -f -v
 
-now our image is ready to be built
+Now our image is ready to be built.
     
     $ bitbake edison-image
 
