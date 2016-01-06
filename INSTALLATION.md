@@ -165,8 +165,11 @@ And finally Flash Intel Edison image
     U-boot & Kernel System Flash Success...
     Your board needs to reboot to complete the flashing procedure, please do not unplug it for 2 minutes.
 
-Now, change to our root folder
-
+Let's change to our edison-src folder
+    
+    $ cd ~/Workspace/edison-src/
+    $ pwd
+    /home/iotchampion/Workspace/edison-src
     $ cd ../../../
     bbcache  build  flash.log  Makefile  meta-arduino  meta-intel-edison  out  Patches  pub
     $ ls
