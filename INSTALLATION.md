@@ -108,7 +108,13 @@ It is important to build a full image for the first time before making any chang
 After successfully building the edison-image, run the postBuild script with the following command 
 
     $ ls
-    bitbake.lock  cache  conf  symbols  tmp  toFlash
+    bitbake.lock  cache  conf  tmp
+    $ cd ../../../
+    $ pwd
+    /home/iotchampion/Workspace/edison-src
+    $ ls
+    bbcache  Makefile  meta-arduino  meta-intel-edison  out
+    $ meta-intel-edison/utils/flash/postBuild.sh
     $ ../../../meta-intel-edison/utils/flash/postBuild.sh .
     EDISON_ROOTFS_MB = 1536, IMAGE_SIZE_MB = 548
     1+0 records in
