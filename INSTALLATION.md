@@ -5,45 +5,53 @@ First, make sure we are at the current path and have the file we just downloaded
 
     $ pwd
     /home/iotchampion/Workspace
-    $ ls -l
-    total 6052
-    -rw-r--r-- 1 iotchampion iot 6195269 Jul 13 16:35 edison-src-ww25.5-15.tgz
-
+    $ ls
+    edison-src-ww25.5-15.tgz
     
-extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file you just downloaded and change directory to the one just extracted
-
-## Version ww42-14
-
-Go to your home directory
-
-    $ cd
-
-Untar...
-
-    $ tar -xzf edison-src-rel1-maint-rel1-ww42-14.tgz
-    $ ls edison-src
-    arduino  broadcom_cws  device-software  mw
-    $ cd edison-src
-    $ ./device-software/setup.sh
-    $ gedit ./build/conf/local.conf
-    # Modify 'BB_NUMBER_THREADS = "16"' and 'PARALLEL_MAKE = "-j 12"'  
-    $ source poky/oe-init-build-env
-    $ bitbake edison-image
-    $ ../device-software/utils/flash/postBuild.sh
-
-## Version ww24-15
-
-    $ cd
+Extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file you just downloaded and change directory to the one just extracted.
+    
     $ tar xvf edison-src-ww25.5-15.tgz
-    $ ls edison-src
+    edison-src/
+    edison-src/Makefile
+    edison-src/meta-intel-edison/
+    edison-src/meta-intel-edison/README
+    edison-src/meta-intel-edison/MAINTAINERS
+            .
+            .
+            .
+    edison-src/meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
+    edison-src/meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/upstream_to_edison.patch
+    edison-src/meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/defconfig
+    edison-src/meta-intel-edison/meta-intel-edison-bsp/README.sources
+    
+    $ ls
+    edison-src  edison-src-ww25.5-15.tgz
+    
+    $ cd edison-src/
+    $ pwd
+    /home/iotchampion/Workspace/edison-src
+    $ ls
     Makefile  meta-intel-edison
-    $ cd edison-src
 
 Connect two USB cables to the Edison board and to the computer where the commands are executing, move the switch next to the microUSBs slots towards the microUSBs.
 
 Use the setup.sh script that is inside the folder *meta-intel-edison*. This script initializes the build environment for Edison. Type
 
     $ ./meta-intel-edison/setup.sh
+    We are building in external mode
+    Cloning into bare repository 'poky-mirror.git'...
+    remote: Counting objects: 297154, done.
+    remote: Compressing objects: 100% (73648/73648), done.
+    remote: Total 297154 (delta 218863), reused 296043 (delta 217752)
+    Receiving objects: 100% (297154/297154), 116.33 MiB | 4.84 MiB/s, done.
+            .
+            .
+            .
+    Now run these two commands to setup and build the flashable image:
+    cd /home/iotchampion/Workspace/edison-src/out/linux64
+    source poky/oe-init-build-env
+    bitbake edison-image
+    *************
 
 to run it. Optionally, we can move our download and build cache (also known as sstate) directories under the build directory. Moving these two directories will make it easier to share data between build environments and allow much faster rebuilding images
 
@@ -54,9 +62,11 @@ to run it. Optionally, we can move our download and build cache (also known as s
 Then, change directory to poky, see its content
 
     $ cd out/linux64/
+    $ pwd
+    /home/iotchampion/Workspace/edison-src/out/linux64
     $ ls
     build  poky
-
+    
 and configure the shell environment with the following source command
 
     $ source poky/oe-init-build-env
@@ -83,10 +93,15 @@ Now, we are ready to build a full Edison image with the following bitbake comman
     Build Configuration:
     BB_VERSION        = "1.24.0"
     BUILD_SYS         = "x86_64-linux"
-    ... ...
+            .
+            .
+            .
     NOTE: Tasks Summary: Attempted 3757 tasks of which 568 didn't need to be rerun and all succeeded.
 
     Summary: There were 26 WARNING messages shown.
+    
+    
+    
 
 It is important to build a full image for the first time before making any changes to the Edison image. Be patient, this process takes from 2 to 5 or more hours depending on the hardware of the host machine.
 
@@ -310,3 +325,35 @@ hit enter a few times and a log in appears. Default user is *root* with no passw
 Once logged in run ```uname -a```, the name of the Kernel should have been renamed with the RT tags as shown below.
 
 ![uname](Images/uname.PNG)
+
+*******************************
+## Version ww42-14
+
+Go to your home directory
+
+    $ cd
+
+Untar...
+
+    $ tar -xzf edison-src-rel1-maint-rel1-ww42-14.tgz
+    $ ls edison-src
+    arduino  broadcom_cws  device-software  mw
+    $ cd edison-src
+    $ ./device-software/setup.sh
+    $ gedit ./build/conf/local.conf
+    # Modify 'BB_NUMBER_THREADS = "16"' and 'PARALLEL_MAKE = "-j 12"'  
+    $ source poky/oe-init-build-env
+    $ bitbake edison-image
+    $ ../device-software/utils/flash/postBuild.sh
+
+## Version ww24-15
+
+    $ cd
+    $ tar xvf edison-src-ww25.5-15.tgz
+    $ ls edison-src
+    Makefile  meta-intel-edison
+    $ cd edison-src
+
+
+
+*******************************
