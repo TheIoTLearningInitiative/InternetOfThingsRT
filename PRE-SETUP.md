@@ -5,6 +5,13 @@ Pre-Setup
 
 To follow this tutorial you have to have installed a Linux distribution, Debian 7.9 is the one used here, any Debian based distribution should work, the instructions provided for the Linux distributions supported for Yocto project are shown (and tested successfully) but not followed on this document.
 
+We will assume your username in the Linux distribution is iotchampion, to know the name of your current user type the following command:
+
+    $ echo $USER
+    iotchampion
+    
+Substituting iotchampion with your current user will give you the directory we (you user and we IoT Learning Initiative) are working on.
+
 ## Adjusting our Linux
 
 This section provides required set up and packages for building an image with Real-Time kernel patch. 
@@ -14,7 +21,7 @@ This section provides required set up and packages for building an image with Re
 The following packages are needed by a Debian or Debian based distribution, to install them, update and install:
 
     $ sudo apt-get update
-    $ sudo apt-get install build-essential git diffstat gawk chrpath texinfo libtool gcc-multilib dfu-util screen u-boot-tools:i386
+    $ sudo apt-get install build-essential git diffstat gawk chrpath texinfo libtool gcc-multilib dfu-util screen u-boot-tools
 
 ### Fedora (supported) distributions
 
@@ -43,9 +50,13 @@ The following packages are needed by a CentOS distribution, to install them, upd
 To download the Edison image, go to the desired working directory and download it.
 In this case, we move to our home directory, a new folder is created as a Workspace, and then we move to this new Workspace directory
 
-    $ cd ~
+    $ cd
+    $ pwd
+    iotchampion
     $ mkdir Workspace
     $ cd Workspace
+    $ pwd
+    /home/iotchampion/Workspace
 
 In this *Workspace* directory the Edison image is downloaded, 2 versions available
 
