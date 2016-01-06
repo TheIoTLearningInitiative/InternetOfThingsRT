@@ -165,41 +165,55 @@ And finally Flash Intel Edison image
     U-boot & Kernel System Flash Success...
     Your board needs to reboot to complete the flashing procedure, please do not unplug it for 2 minutes.
 
-Let's change to our edison-src folder
+Let's change to our edison-src folder and verify we see these files:
     
     $ cd ~/Workspace/edison-src/
     $ pwd
     /home/iotchampion/Workspace/edison-src
-    $ cd ../../../
-    bbcache  build  flash.log  Makefile  meta-arduino  meta-intel-edison  out  Patches  pub
     $ ls
-    <>
-    $ pwd
-    <>
+    bbcache  build  flash.log  Makefile  meta-arduino  meta-intel-edison  out
     
 Create a directory called Patches and then switch to it
 
     $ mkdir Patches
     $ cd Patches
+    $ pwd
+    /home/iotchampion/Workspace/edison-src/Patches
 
 and use wget to download the Real Time patches
 
     $ wget http://yoneken.sakura.ne.jp/share/rt_edison.tar.bz2
-
-Decompress the bz2 file
+    --2016-01-06 13:27:36--  http://yoneken.sakura.ne.jp/share/rt_edison.tar.bz2
+    Resolving yoneken.sakura.ne.jp (yoneken.sakura.ne.jp)... 219.94.129.103
+    Connecting to yoneken.sakura.ne.jp (yoneken.sakura.ne.jp)|219.94.129.103|:80... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 686080 (670K) [application/x-bzip2]
+    Saving to: `rt_edison.tar.bz2'
+    
+    100%[=========================================================================================================================================================================>] 686,080      325K/s   in 2.1s    
+    
+    2016-01-06 13:27:38 (325 KB/s) - `rt_edison.tar.bz2' saved [686080/686080]
+    
+Decompress the bz2 file and see we have the following files:
 
     $ tar -xaf rt_edison.tar.bz2
+    $ ls
+    intel_mid_rpmsg.c.patch  patch-3.10.17-rt12_edison.patch  rt_edison.tar.bz2
 
-and move these two patches called *patch-3.10.17-rt12_edison.patch* and *intel_mid_rpmsg.c.patch* to the files directory where new patches are placed
+and move these two patches called *patch-3.10.17-rt12_edison.patch* and *intel_mid_rpmsg.c.patch* to the files directory where new patches are placed:
 
-    $ cp patch-3.10.17-rt12_edison.patch ../meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
-    $ cp intel_mid_rpmsg.c.patch ../meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
+    $ cp *.patch ../meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
+
+Verify that the destination folder has these two patches inside it.
+
+    $ ls ../meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
+    defconfig  intel_mid_rpmsg.c.patch  patch-3.10.17-rt12_edison.patch  upstream_to_edison.patch
 
 Now, let's edit a file under the Linux directory, one directory above the files directory we've just copied the Real Time patches. Move to the Linux directory
 
     $ cd ../meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/
 
-and edit de bbappend file (assuming the edition happens under a Debian based Linux distribution; otherwise use a simple text editor like nano, vi, vim or emacs)
+and edit de bbappend file (now we use another editor called gedit  for variety purposes, assuming the edition happens under a Debian based Linux distribution; otherwise use a simple text editor like nano, vi, vim or emacs)
 
     $ gedit linux-yocto_3.10.bbappend
     
@@ -231,17 +245,37 @@ Replace the content of the file to have the following:
       git apply "${WORKDIR}/intel_mid_rpmsg.c.patch"  
     }
 
-Now, move to our out/linux root folder
+Save the file and exit.
 
+Now, move to our out/linux root folder
+    
+    $ pwd
+    /home/iotchampion/Workspace/edison-src/meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux
     $ cd ../../../../out/linux64/
+    $ pwd
+    /home/iotchampion/Workspace/edison-src/out/linux64
 
 configure the shell environment again
 
     $ source poky/oe-init-build-env
+    
+    ### Shell environment set up for builds. ###
 
-and get into the Kernel Configuration
+    You can now run 'bitbake <target>'
+    
+    Common targets are:
+        core-image-minimal
+        core-image-sato
+        meta-toolchain
+        adt-installer
+        meta-ide-support
+    
+    You can also run generated qemu images with a command like 'runqemu qemux86'
+
+and get into the Kernel Configuratin
 
     $ bitbake virtual/kernel -c menuconfig
+*********************
 
 When first run, you will be prompted with a screen like this
 
