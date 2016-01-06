@@ -105,7 +105,7 @@ Now, we are ready to build a full Edison image with the following bitbake comman
 
 It is important to build a full image for the first time before making any changes to the Edison image. Be patient, this process takes from 2 to 5 or more hours depending on the hardware of the host machine.
 
-After successfully building the edison-image, run the postBuild script with the following command 
+After successfully building the edison-image, we have to modify the postBuild.sh script in order to have the correct paths. Let's change directory and verify we are editing the correct file.
 
     $ ls
     bitbake.lock  cache  conf  tmp
@@ -114,28 +114,56 @@ After successfully building the edison-image, run the postBuild script with the 
     /home/iotchampion/Workspace/edison-src
     $ ls
     bbcache  Makefile  meta-arduino  meta-intel-edison  out
+
+Use your favorite simple text editor and modify line 9 of the postBuild.sh script. In this case we use vim.
+
+    $ vim meta-intel-edison/utils/flash/postBuild.sh
+
+Once inside, type ```i``` to insert new text, modify line 9 so it looks like this.
+
+    7 build_dir=""
+    8 if [ $# -eq 0 ]; then
+    9   build_dir=$top_repo_dir/out/linux64/build
+    10 else
+
+Press escape, and use the following keyboard combination ```:wq```, then press enter.
+
+Now, run the postBuild script with the following command.
+
     $ meta-intel-edison/utils/flash/postBuild.sh
-    $ ../../../meta-intel-edison/utils/flash/postBuild.sh .
-    EDISON_ROOTFS_MB = 1536, IMAGE_SIZE_MB = 548
+    EDISON_ROOTFS_MB = 1536, IMAGE_SIZE_MB = 533
     1+0 records in
-    1+0 records out
-    ...
-    Image Name:   Edison Updater script
-    Created:      Sun Dec 20 16:22:46 2015
-    Image Type:   PowerPC Linux Script (uncompressed)
-    Data Size:    14683 Bytes = 14.34 kB = 0.01 MB
-    Load Address: 00010000
-    Entry Point:  00010000
-    Contents:
+            .
+            .
+            .
        Image 0: 14675 Bytes = 14.33 kB = 0.01 MB
     **** Done ***
-    Files ready to flash in ./toFlash/
+    Files ready to flash in /home/iotchampion/Workspace/edison-src/out/linux64/build/toFlash/
     Run the flashall script there to start flashing.
     *************
 
+Make sure we are in this path 
+    
+    $ pwd /home/iotchampion/Workspace/edison-src
+    /home/iotchampion/Workspace/edison-src
+    
+
+Disconnect the two USB cables to the Edison board and the computer where the commands are executing, connect them after a few seconds and make sure the switch next to the microUSBs slots is-towards the microUSBs.
+    
 And finally Flash Intel Edison image
 
-    $ ./toFlash/flashall.sh
+    $ ./out/linux64/build/toFlash/flashall.sh
+    Using U-Boot target: edison-blankcdc
+    Now waiting for dfu device 8087:0a99
+    Please plug and reboot the board
+            .
+            .
+            .
+    Flashing boot partition (kernel)
+    Flashing rootfs, (it can take up to 5 minutes... Please be patient)
+    Rebooting
+    U-boot & Kernel System Flash Success...
+    Your board needs to reboot to complete the flashing procedure, please do not unplug it for 2 minutes.
 
 Now, change to our root folder
 
