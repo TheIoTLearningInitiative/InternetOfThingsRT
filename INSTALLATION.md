@@ -283,7 +283,6 @@ configure the shell environment again
 and get into the Kernel Configuratin
 
     $ bitbake virtual/kernel -c menuconfig
-*********************
 
 When first run, you will be prompted with a screen like this
 
@@ -358,12 +357,12 @@ When the Kernel configuration is complete, change directory to linux-edison-stan
 
 and copy the Kernel configuration to these two folders
 
-    $ cp .config ~/intel-edison-system-setup-files/device-software/meta-edison/recipes-kernel/linux/files/defconfig
+    $ cp .config /home/iotchampion/Workspace/edison-src/meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/defconfig
     $ cp .config ../linux/arch/x86/configs/i386_edison_defconfig
 
 Go back to our edison-src root folder
 
-    $ cd ~/edison-src
+    $ cd ~/Workspace/edison-src
 
 and configure the shell environment again
 
