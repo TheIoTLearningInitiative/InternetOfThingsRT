@@ -148,7 +148,7 @@ Make sure we are in this path
     /home/iotchampion/Workspace/edison-src
     
 
-Disconnect the two USB cables to the Edison board and the computer where the commands are executing, connect them after a few seconds and make sure the switch next to the microUSBs slots is-towards the microUSBs.
+Disconnect the two USB cables to the Edison board and the computer where the commands are executing, connect them after the execution of the script, the terminal will display *Please plug and reboot the board*, make sure the switch next to the microUSBs slots is-towards the microUSBs.
     
 And finally Flash Intel Edison image
 
