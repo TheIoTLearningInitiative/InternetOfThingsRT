@@ -6,11 +6,11 @@ First, make sure we are at the current path and have the file we just downloaded
     $ pwd
     /home/iotchampion/Workspace
     $ ls
-    edison-src-ww25.5-15.tgz
+    edison-src-rel1-maint-rel1-ww42-14.tgz    
     
 Extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file you just downloaded and change directory to the one just extracted.
     
-    $ tar xvf edison-src-ww25.5-15.tgz
+    $ tar edison-src-rel1-maint-rel1-ww42-14.tgz
     edison-src/
     edison-src/Makefile
     edison-src/meta-intel-edison/
@@ -19,10 +19,10 @@ Extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file you just
             .
             .
             .
-    edison-src/meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
-    edison-src/meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/upstream_to_edison.patch
-    edison-src/meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/defconfig
-    edison-src/meta-intel-edison/meta-intel-edison-bsp/README.sources
+    edison-src/arduino/clloader/long-options.h
+    edison-src/arduino/clloader/clloader.h
+    edison-src/arduino/clloader/crctab.c
+    edison-src/arduino/clloader/zmodem.h
     
     $ ls
     edison-src  edison-src-ww25.5-15.tgz
@@ -31,24 +31,22 @@ Extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file you just
     $ pwd
     /home/iotchampion/Workspace/edison-src
     $ ls
-    Makefile  meta-intel-edison
+    arduino  broadcom_cws  device-software  mw
 
 Connect two USB cables to the Edison board and to the computer where the commands are executing, move the switch next to the microUSBs slots towards the microUSBs.
 
 Use the setup.sh script that is inside the folder *meta-intel-edison*. This script initializes the build environment for Edison. Type
 
-    $ ./meta-intel-edison/setup.sh
+    $ ./device-software/setup.sh 
     We are building in external mode
-    Cloning into bare repository 'poky-mirror.git'...
-    remote: Counting objects: 297154, done.
-    remote: Compressing objects: 100% (73648/73648), done.
-    remote: Total 297154 (delta 218863), reused 296043 (delta 217752)
-    Receiving objects: 100% (297154/297154), 116.33 MiB | 4.84 MiB/s, done.
-            .
-            .
-            .
+    Extracting upstream Yocto tools in the poky/ directory from archive
+    Unpacking Mingw layer to poky/meta-mingw/ directory from archive
+    Unpacking Darwin layer to poky/meta-darwin/ directory from archive
+    Initializing yocto build environment
+    Setting up yocto configuration file (in build/conf/local.conf)
+    ** Success **
+    SDK will be generated for linux64 host
     Now run these two commands to setup and build the flashable image:
-    cd /home/iotchampion/Workspace/edison-src/out/linux64
     source poky/oe-init-build-env
     bitbake edison-image
     *************
@@ -59,21 +57,14 @@ to run it. Optionally, we can move our download and build cache (also known as s
     $ mkdir bitbake_sstate_dir
     $ ./meta-intel-edison/setup.sh --dl_dir=bitbake_download_dir --sstate_dir=bitbake_sstate_dir
 
-Then, change directory to poky, see its content
-
-    $ cd out/linux64/
-    $ pwd
-    /home/iotchampion/Workspace/edison-src/out/linux64
-    $ ls
-    build  poky
-    
-and configure the shell environment with the following source command
+Configure the shell environment with the following source command
 
     $ source poky/oe-init-build-env
+    
     ### Shell environment set up for builds. ###
-
+    
     You can now run 'bitbake <target>'
-
+    
     Common targets are:
         core-image-minimal
         core-image-sato
@@ -83,8 +74,13 @@ and configure the shell environment with the following source command
     
     You can also run generated qemu images with a command like 'runqemu qemux86'
 
-Now, we are ready to build a full Edison image with the following bitbake command
-    
+Now, we are ready to build a full Edison image with the following bitbake command.
+First, verify again we are working under the right path:
+
+    $ pwd
+    /home/iotchampion/Old/edison-src/build
+    $ls
+    conf
     $ bitbake edison-image
     Loading cache: 100% |###################################################################################################| ETA:  00:00:00
     Loaded 1365 entries from dependency cache.
@@ -99,9 +95,6 @@ Now, we are ready to build a full Edison image with the following bitbake comman
     NOTE: Tasks Summary: Attempted 3757 tasks of which 568 didn't need to be rerun and all succeeded.
 
     Summary: There were 26 WARNING messages shown.
-    
-    
-    
 
 It is important to build a full image for the first time before making any changes to the Edison image. Be patient, this process takes from 2 to 5 or more hours depending on the hardware of the host machine.
 
