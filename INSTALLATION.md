@@ -79,8 +79,10 @@ First, verify again we are working under the right path:
 
     $ pwd
     /home/iotchampion/Old/edison-src/build
+    
     $ls
     conf
+    
     $ bitbake edison-image
     Loading cache: 100% |###################################################################################################| ETA:  00:00:00
     Loaded 1365 entries from dependency cache.
@@ -101,7 +103,7 @@ It is important to build a full image for the first time before making any chang
 After successfully building the edison-image, we have to modify the postBuild.sh script in order to have the correct paths. Let's change directory and verify we are editing the correct file.
 
     $ ls
-    bitbake.lock  cache  conf  tmp
+    bitbake.lock  cache  conf  downloads  sstate-cache  tmp
     $ cd ../../../
     $ pwd
     /home/iotchampion/Workspace/edison-src
@@ -430,3 +432,5 @@ Untar...
 
 
 *******************************
+
+https://communities.intel.com/thread/58653?start=0&tstart=0
