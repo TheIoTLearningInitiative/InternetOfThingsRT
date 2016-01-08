@@ -173,91 +173,17 @@ Move the patches we have just untar to the following directory and verify they w
     defconfig                patch-3.10.17-rt12_edison.patch
     intel_mid_rpmsg.c.patch  upstream_to_edison.patch
     
-Move to the linux directory, one directory above the files directory where we have just copied the patches and edit the 
+Move to the linux directory, one directory above the files directory where we have just copied the patches and verify the path we currently are.
 
     $ cd ../device-software/meta-edison/recipes-kernel/linux/
 
-
-
-
-
-
-
-********************************************************************
-Use your favorite simple text editor and modify line 9 of the postBuild.sh script. In this case we use vim.
-
-    $ vim meta-intel-edison/utils/flash/postBuild.sh
-
-Once inside, type ```i``` to insert new text, modify line 9 so it looks like this.
-
-    7 build_dir=""
-    8 if [ $# -eq 0 ]; then
-    9   build_dir=$top_repo_dir/out/linux64/build
-    10 else
-
-Press escape, and use the following keyboard combination ```:wq```, then press enter.
-
-Now, run the postBuild script with the following command.
-
-    $ meta-intel-edison/utils/flash/postBuild.sh
-    EDISON_ROOTFS_MB = 1536, IMAGE_SIZE_MB = 533
-    1+0 records in
-            .
-            .
-            .
-       Image 0: 14675 Bytes = 14.33 kB = 0.01 MB
-    **** Done ***
-    Files ready to flash in /home/iotchampion/Workspace/edison-src/out/linux64/build/toFlash/
-    Run the flashall script there to start flashing.
-    *************
-
-Make sure we are in this path 
-    
-    $ pwd /home/iotchampion/Workspace/edison-src
-    /home/iotchampion/Workspace/edison-src
-    
-
-Disconnect the two USB cables to the Edison board and the computer where the commands are executing, connect them after the execution of the script, the terminal will display *Please plug and reboot the board*, make sure the switch next to the microUSBs slots is-towards the microUSBs.
-    
-And finally Flash Intel Edison image
-
-    $ ./out/linux64/build/toFlash/flashall.sh
-    Using U-Boot target: edison-blankcdc
-    Now waiting for dfu device 8087:0a99
-    Please plug and reboot the board
-            .
-            .
-            .
-    Flashing boot partition (kernel)
-    Flashing rootfs, (it can take up to 5 minutes... Please be patient)
-    Rebooting
-    U-boot & Kernel System Flash Success...
-    Your board needs to reboot to complete the flashing procedure, please do not unplug it for 2 minutes.
-
-Let's change to our edison-src folder and verify we see these files:
-    
-    $ cd ~/Workspace/edison-src/
     $ pwd
-    /home/iotchampion/Workspace/edison-src
-    $ ls
-    arduino  broadcom_cws  build  device-software  mw  poky
+    /home/iotchampion/Old/edison-src/device-software/meta-edison/recipes-kernel/linux
     
+    $ ls    
+    files  linux-yocto_3.10.bbappend
 
-
-and move these two patches called *patch-3.10.17-rt12_edison.patch* and *intel_mid_rpmsg.c.patch* to the files directory where new patches are placed:
-
-    $ cp *.patch ../meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
-
-Verify that the destination folder has these two patches inside it.
-
-    $ ls ../meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/
-    defconfig  intel_mid_rpmsg.c.patch  patch-3.10.17-rt12_edison.patch  upstream_to_edison.patch
-
-Now, let's edit a file under the Linux directory, one directory above the files directory we've just copied the Real Time patches. Move to the Linux directory
-
-    $ cd ../meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/
-
-and edit de bbappend file (now we use another editor called gedit  for variety purposes, assuming the edition happens under a Debian based Linux distribution; otherwise use a simple text editor like nano, vi, vim or emacs)
+Edit de bbappend file (now we use another editor called gedit  for variety purposes, assuming the edition happens under a Debian based Linux distribution; otherwise use a simple text editor like nano, vi, vim or emacs)
 
     $ gedit linux-yocto_3.10.bbappend
     
