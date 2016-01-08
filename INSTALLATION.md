@@ -320,12 +320,12 @@ and copy the Kernel configuration to these two folders
     $ cp .config /home/iotchampion/Workspace/edison-src/meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux/files/defconfig
     $ cp .config ../linux/arch/x86/configs/i386_edison_defconfig
 
-Go back to our linux64 folder
+Go back to our edison-src folder
 
-    $ cd ~/Workspace/edison-src/out/linux64
+    $ cd ~/Workspace/edison-src/
     $ pwd
-    /home/iotchampion/Workspace/edison-src/out/linux64
-
+    /home/iotchampion/Workspace/edison-src
+    
 and configure the shell environment again
 
     $ source poky/oe-init-build-env
