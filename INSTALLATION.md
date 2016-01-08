@@ -219,21 +219,11 @@ Save the file and exit.
 
 Now, move to our edison-src root folder
     
-    $ pwd
-    /home/iotchampion/Workspace/edison-src/meta-intel-edison/meta-intel-edison-bsp/recipes-kernel/linux
     $ cd ../../../../
     $ pwd
     /home/iotchampion/Workspace/edison-src/
-    $ make setup
-    $ make
 
-Move to the linux64 folder,
-
-    $ cd out/linux64/
-    $ pwd
-    /home/iotchampion/Workspace/edison-src/out/linux64
-
-configure the shell environment again
+Configure the shell environment again
 
     $ source poky/oe-init-build-env
     
