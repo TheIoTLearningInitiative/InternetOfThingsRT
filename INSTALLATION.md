@@ -144,7 +144,32 @@ Let's change to our edison-src folder and verify we see these files:
     arduino  broadcom_cws  build  device-software  mw  poky
     
 
+Create a directory called Patches and then switch to it
 
+    $ mkdir Patches
+    $ cd Patches
+    $ pwd
+    /home/iotchampion/Workspace/edison-src/Patches
+
+and use wget to download the Real Time patches
+
+    $ wget http://yoneken.sakura.ne.jp/share/rt_edison.tar.bz2
+    --2016-01-06 13:27:36--  http://yoneken.sakura.ne.jp/share/rt_edison.tar.bz2
+    Resolving yoneken.sakura.ne.jp (yoneken.sakura.ne.jp)... 219.94.129.103
+    Connecting to yoneken.sakura.ne.jp (yoneken.sakura.ne.jp)|219.94.129.103|:80... connected.
+    HTTP request sent, awaiting response... 200 OK
+    Length: 686080 (670K) [application/x-bzip2]
+    Saving to: `rt_edison.tar.bz2'
+    
+    100%[=========================================================================================================================================================================>] 686,080      325K/s   in 2.1s    
+    
+    2016-01-06 13:27:38 (325 KB/s) - `rt_edison.tar.bz2' saved [686080/686080]
+    
+Decompress the bz2 file and see we have the following files:
+
+    $ tar -xaf rt_edison.tar.bz2
+    $ ls
+    intel_mid_rpmsg.c.patch  patch-3.10.17-rt12_edison.patch  rt_edison.tar.bz2
 
 
 *****************
@@ -206,32 +231,7 @@ Let's change to our edison-src folder and verify we see these files:
     $ ls
     arduino  broadcom_cws  build  device-software  mw  poky
     
-Create a directory called Patches and then switch to it
 
-    $ mkdir Patches
-    $ cd Patches
-    $ pwd
-    /home/iotchampion/Workspace/edison-src/Patches
-
-and use wget to download the Real Time patches
-
-    $ wget http://yoneken.sakura.ne.jp/share/rt_edison.tar.bz2
-    --2016-01-06 13:27:36--  http://yoneken.sakura.ne.jp/share/rt_edison.tar.bz2
-    Resolving yoneken.sakura.ne.jp (yoneken.sakura.ne.jp)... 219.94.129.103
-    Connecting to yoneken.sakura.ne.jp (yoneken.sakura.ne.jp)|219.94.129.103|:80... connected.
-    HTTP request sent, awaiting response... 200 OK
-    Length: 686080 (670K) [application/x-bzip2]
-    Saving to: `rt_edison.tar.bz2'
-    
-    100%[=========================================================================================================================================================================>] 686,080      325K/s   in 2.1s    
-    
-    2016-01-06 13:27:38 (325 KB/s) - `rt_edison.tar.bz2' saved [686080/686080]
-    
-Decompress the bz2 file and see we have the following files:
-
-    $ tar -xaf rt_edison.tar.bz2
-    $ ls
-    intel_mid_rpmsg.c.patch  patch-3.10.17-rt12_edison.patch  rt_edison.tar.bz2
 
 and move these two patches called *patch-3.10.17-rt12_edison.patch* and *intel_mid_rpmsg.c.patch* to the files directory where new patches are placed:
 
