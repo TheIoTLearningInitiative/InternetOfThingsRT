@@ -111,8 +111,43 @@ After successfully building the edison-image, we have to modify the postBuild.sh
     bbcache  Makefile  meta-arduino  meta-intel-edison  out
 
     $ ../device-software/utils/flash/postBuild.sh  
+    1+0 records in
+    1+0 records out
+    4194304 bytes (4.2 MB) copied, 0.0030999 s, 1.4 GB/s
+            .
+            .
+            .
+    
+    **** Done ***
+    Files ready to flash in /home/iotchampion/Old/edison-src/build/toFlash/
+    Run the flashall script there to start flashing.
+    *************
     
     
+Disconnect the two USB cables to the Edison board and the computer where the commands are executing, connect them after the execution of the script, the terminal will display *Please plug and reboot the board*, make sure the switch next to the microUSBs slots is-towards the microUSBs.
+    
+And finally Flash Intel Edison image
+
+    sudo ./toFlash/flashall.sh  
+    
+Wait for a few minutes as the output says, and type the following command to enter the Edison and verify everything went ok. Hit Enter a few times until the edison log in appears.
+The default username is *root*, without password.
+
+    sudo screen /dev/ttyUSB0 115200
+    
+Let's change to our edison-src folder and verify we see these files:
+    
+    $ cd ~/Workspace/edison-src/
+    $ pwd
+    /home/iotchampion/Workspace/edison-src
+    $ ls
+    arduino  broadcom_cws  build  device-software  mw  poky
+    
+
+
+
+
+*****************
 Use your favorite simple text editor and modify line 9 of the postBuild.sh script. In this case we use vim.
 
     $ vim meta-intel-edison/utils/flash/postBuild.sh
@@ -169,7 +204,7 @@ Let's change to our edison-src folder and verify we see these files:
     $ pwd
     /home/iotchampion/Workspace/edison-src
     $ ls
-    bbcache  build  flash.log  Makefile  meta-arduino  meta-intel-edison  out
+    arduino  broadcom_cws  build  device-software  mw  poky
     
 Create a directory called Patches and then switch to it
 
