@@ -340,62 +340,20 @@ Now our image is ready to be built.
 
 The whole Edison image is rebuilt using the Real Time patched Kernel.
 
-Now, we have to run a post building script, located in another folder. Change directory to
+Now, we have to run the post building script. 
 
-    $ cd ../../../meta-intel-edison/utils/
-
-and run
+    $ ../device-software/utils/flash/postBuild.sh  
     
-    $ ./postBuild.sh
+Flash Intel Edison image.
 
-to prepare our new setup for the flashing process. Change directory to the flash folder
+    sudo ./toFlash/flashall.sh  
+    
+Wait for a few minutes as the output says, and type the following command to enter the Edison and verify everything went ok. Hit Enter a few times until the edison log in appears.
+The default username is *root*, without password.
 
-    $ cd flash/
+    sudo screen /dev/ttyUSB0 115200
 
-and execute the flash script with sudo privileges
-
-    $ sudo ./flashall.sh 
-
-Finished the flashing process, get into de Edison system
-
-    $ sudo screen /dev/ttyUSB0 115200
-
-hit enter a few times and a log in appears. Default user is *root* with no password.
 
 Once logged in run ```uname -a```, the name of the Kernel should have been renamed with the RT tags as shown below.
 
 ![uname](Images/uname.PNG)
-
-*******************************
-## Version ww42-14
-
-Go to your home directory
-
-    $ cd
-
-Untar...
-
-    $ tar -xzf edison-src-rel1-maint-rel1-ww42-14.tgz
-    $ ls edison-src
-    arduino  broadcom_cws  device-software  mw
-    $ cd edison-src
-    $ ./device-software/setup.sh
-    $ gedit ./build/conf/local.conf
-    # Modify 'BB_NUMBER_THREADS = "16"' and 'PARALLEL_MAKE = "-j 12"'  
-    $ source poky/oe-init-build-env
-    $ bitbake edison-image
-    $ ../device-software/utils/flash/postBuild.sh
-
-## Version ww24-15
-
-    $ cd
-    $ tar xvf edison-src-ww25.5-15.tgz
-    $ ls edison-src
-    Makefile  meta-intel-edison
-    $ cd edison-src
-
-
-
-*******************************
-
-https://communities.intel.com/thread/58653?start=0&tstart=0
