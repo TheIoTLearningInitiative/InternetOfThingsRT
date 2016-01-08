@@ -68,14 +68,15 @@ Configure the shell environment with the following source command
     
     You can also run generated qemu images with a command like 'runqemu qemux86'
 
-Now, we are ready to build a full Edison image with the following bitbake command.
-First, verify again we are working under the right path:
+Verify again we are working under the right path:
 
     $ pwd
     /home/iotchampion/Old/edison-src/build
     
     $ls
     conf
+    
+Now, we are ready to build a full Edison image with the following bitbake command.
     
     $ bitbake edison-image
     Loading cache: 100% |###################################################################################################| ETA:  00:00:00
@@ -178,7 +179,11 @@ Move to the linux directory, one directory above the files directory where we ha
 
 
 
-*****************
+
+
+
+
+********************************************************************
 Use your favorite simple text editor and modify line 9 of the postBuild.sh script. In this case we use vim.
 
     $ vim meta-intel-edison/utils/flash/postBuild.sh
