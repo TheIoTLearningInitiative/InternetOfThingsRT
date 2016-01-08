@@ -171,6 +171,18 @@ Decompress the bz2 file and see we have the following files:
     $ ls
     intel_mid_rpmsg.c.patch  patch-3.10.17-rt12_edison.patch  rt_edison.tar.bz2
 
+Move the patches we have just untar to the following directory and verify they were copied.
+
+    $ cp *.patch ../device-software/meta-edison/recipes-kernel/linux/files  
+    $ ls ../device-software/meta-edison/recipes-kernel/linux/files  
+    defconfig                patch-3.10.17-rt12_edison.patch
+    intel_mid_rpmsg.c.patch  upstream_to_edison.patch
+    
+Move to the linux directory, one directory above the files directory where we have just copied the patches and edit the 
+
+    $ cd ../device-software/meta-edison/recipes-kernel/linux/
+
+
 
 *****************
 Use your favorite simple text editor and modify line 9 of the postBuild.sh script. In this case we use vim.
