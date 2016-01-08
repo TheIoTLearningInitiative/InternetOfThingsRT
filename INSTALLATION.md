@@ -25,7 +25,7 @@ Extract the contents of the edison-src-rel1-maint-rel1-ww42-14.tgz file you just
     edison-src/arduino/clloader/zmodem.h
     
     $ ls
-    edison-src  edison-src-ww25.5-15.tgz
+    edison-src  edison-src-rel1-maint-rel1-ww42-14.tgz
     
     $ cd edison-src/
     $ pwd
@@ -110,6 +110,9 @@ After successfully building the edison-image, we have to modify the postBuild.sh
     $ ls
     bbcache  Makefile  meta-arduino  meta-intel-edison  out
 
+    $ ../device-software/utils/flash/postBuild.sh  
+    
+    
 Use your favorite simple text editor and modify line 9 of the postBuild.sh script. In this case we use vim.
 
     $ vim meta-intel-edison/utils/flash/postBuild.sh
