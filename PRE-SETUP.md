@@ -51,6 +51,8 @@ To download the Edison image, go to the desired working directory and download i
 In this case, we move to our home directory, a new folder is created as a Workspace, and then we move to this new Workspace directory
 
     $ cd
+    $ mkdir iotchampion
+    $ cd iotchampion
     $ pwd
     iotchampion
     $ mkdir Workspace
