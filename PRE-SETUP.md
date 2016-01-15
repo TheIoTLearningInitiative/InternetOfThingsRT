@@ -48,11 +48,11 @@ The following packages are needed by a CentOS distribution, to install them, upd
 ## Download Edison Image
 
 To download the Edison image, go to the desired working directory and download it.
-In this case, we move to our home directory, a new folder is created as a Workspace, and then we move to this new Workspace directory
+In this case, our username is __iotchampion__ we move to our home directory, a new folder is created as a Workspace, and then we move to this new Workspace directory
 
     $ cd
     $ mkdir iotchampion
-    $ cd iotchampion
+    $ cd iotchampi
     $ pwd
     iotchampion
     $ mkdir Workspace
