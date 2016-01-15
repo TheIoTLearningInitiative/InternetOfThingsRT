@@ -52,7 +52,7 @@ In this case, our username is __iotchampion__, we move to our home directory, a 
 
     $ cd
     $ pwd
-    iotchampion
+    /home/iotchampion
     $ mkdir Workspace
     $ cd Workspace
     $ pwd
