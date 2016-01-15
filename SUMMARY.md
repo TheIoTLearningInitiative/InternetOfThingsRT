@@ -4,7 +4,6 @@
 * [Pre-Setup](PRE-SETUP.md)
 * [Intel Edison](documentation/IntelEdison/IntelEdison.md)
    * [Installation](INSTALLATION.md)
-   * Temp
 * [2015 Version](2015_version.md)
 * [References](REFERENCES.md)
 
